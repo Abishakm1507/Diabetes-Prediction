@@ -2,6 +2,7 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
+- [Flowchart](#flowchart)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Models Evaluated](#models-evaluated)
@@ -13,7 +14,11 @@
 - [Future Improvements](#future-improvements)
 
 ## Introduction
-This project aims to develop a machine learning model that predicts the likelihood of diabetes based on various health parameters. The model leverages historical medical data to assist healthcare professionals and individuals in making informed health decisions.
+This project utilizes machine learning algorithms to predict diabetes in patients based on key health metrics. By analyzing features such as glucose levels, blood pressure, and body mass index, the model classifies individuals as either diabetic or non-diabetic. The code snippet demonstrates how to use the trained model to make predictions for a sample patient, providing an easy-to-use tool for early diabetes detection and management.
+
+## Flowchart
+![Alt text](/Flowchart.png)
+
 
 ## Features
 - User-friendly interface for data input
