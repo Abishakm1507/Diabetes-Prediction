@@ -1,4 +1,4 @@
-# Diabetes Prediction Machine Learning Model
+# Diabetes Prediction Model
 
 ## Table of Contents
 - [Introduction](#introduction)
