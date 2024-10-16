@@ -92,8 +92,13 @@ To use this project:
    ```bash
    pip install -r requirements.txt
 3. Open the Jupyter Notebook:
-   ```bash
-   jupyter notebook Diabetes-Prediction.ipynb
+   ```
+   jupyter notebook Diabetes_Prediction_Hybrid_Approach.ipynb
+   ```
+   ```
+   jupyter notebook Diabetes_Prediction_10_model_Evaluation.ipynb
+   ```
+   
 4.Run the cells in the notebook to input health parameters and receive diabetes predictions.
 
 ## Future Improvements
