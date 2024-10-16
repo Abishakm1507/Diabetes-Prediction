@@ -14,7 +14,7 @@
 - [Future Improvements](#future-improvements)
 
 ## Introduction
-This project utilizes machine learning algorithms to predict diabetes in patients based on key health metrics. By analyzing features such as glucose levels, blood pressure, and body mass index, the model classifies individuals as either diabetic or non-diabetic. The code snippet demonstrates how to use the trained model to make predictions for a sample patient, providing an easy-to-use tool for early diabetes detection and management.
+This project utilizes machine learning algorithms to predict diabetes in patients based on key health metrics. By analyzing features such as glucose levels, blood pressure, and body mass index, the model classifies individuals as either diabetic or non-diabetic. I have developed and assessed various models, including a hybrid approach that combines Random Forest, XGBoost, and K-Nearest Neighbors, achieving an impressive accuracy of 84.42%. Additionally, I evaluated models such as Logistic Regression (82.47%), Support Vector Classifier (79.22%), and K-Neighbors Classifier (75.97%), measuring not only accuracy but also precision and recall for a comprehensive understanding of each model's performance.
 
 ## Flowchart
 ![Alt text](/Flowchart.png)
@@ -36,27 +36,26 @@ This project utilizes machine learning algorithms to predict diabetes in patient
 - Scikit-learn
 
 ## Models Evaluated
-The following machine learning algorithms were evaluated for accuracy in predicting diabetes:
-- Logistic Regression<br>
-Accuracy: 82.46%
-- KNeighbors Classifier<br>
-Accuracy: 75.97%
-- Support Vector Classifier (SVC)<br>
-Accuracy: 79.22%
-- Naive Bayes<br>
-Accuracy: 75.73%
-- Decision Tree Classifier<br>
-Accuracy: 73.37%
-- Random Forest Classifier<br>
-Accuracy: 81.57%
-- AdaBoost Classifier<br>
-Accuracy: 77.92%
-- Gradient Boosting Classifier<br>
-Accuracy: 81.81%
-- XGBoost Classifier<br>
-Accuracy: 78.57%
-- Extra Trees Classifier<br>
-Accuracy: 80.51%
+
+| **Model**                      | **Accuracy** | **Precision (0)** | **Recall (0)** | **F1-Score (0)** | **Precision (1)** | **Recall (1)** | **F1-Score (1)** |
+|--------------------------------|--------------|--------------------|-----------------|-------------------|--------------------|-----------------|-------------------|
+| **Hybrid Approach**            | **84.42%**   | **0.89**           | **0.89**        | **0.89**          | **0.74**           | **0.74**        | **0.74**          |
+| **Logistic Regression**        | 82.47%       | 0.84               | 0.92            | 0.88              | 0.76               | 0.62            | 0.68              |
+| **K-Neighbors Classifier**     | 75.97%       | 0.82               | 0.84            | 0.83              | 0.61               | 0.57            | 0.59              |
+| **Support Vector Classifier**  | 79.22%       | 0.81               | 0.92            | 0.86              | 0.73               | 0.51            | 0.60              |
+| **Naive Bayes**                | 79.22%       | 0.84               | 0.87            | 0.85              | 0.67               | 0.62            | 0.64              |
+| **Decision Tree Classifier**   | 73.38%       | 0.78               | 0.87            | 0.82              | 0.59               | 0.43            | 0.49              |
+| **Random Forest Classifier**   | 80.52%       | 0.83               | 0.88            | 0.85              | 0.68               | 0.60            | 0.64              |
+| **AdaBoost Classifier**        | 77.92%       | 0.85               | 0.83            | 0.84              | 0.63               | 0.66            | 0.65              |
+| **Gradient Boosting Classifier**| 81.82%      | 0.87               | 0.86            | 0.86              | 0.69               | 0.70            | 0.69              |
+| **XGBoost Classifier**         | 72.08%       | 0.72               | 0.99            | 0.83              | 0.83               | 0.11            | 0.19              |
+| **Extra Trees Classifier**     | 80.52%       | 0.85               | 0.87            | 0.86              | 0.69               | 0.66            | 0.67              |
+
+### Key Observations
+- **Hybrid Approach** stands out with the highest accuracy of **84.42%** and well-balanced precision and recall for both classes.
+- The **Logistic Regression** and **Gradient Boosting Classifier** are competitive but do not surpass the hybrid approach.
+- The **K-Neighbors Classifier** and **XGBoost Classifier** show weaker performance, particularly in recall for class **1**, indicating challenges in identifying that class accurately.
+
 
 
 ## Dataset
@@ -104,10 +103,10 @@ To use this project:
 
 ## Prediction Example
 
-Using Logistic Regression to predict diabetes for a sample patient:
+Using Hybrid model to predict diabetes for a sample patient:
 
 ```python
-y_predict = reg.predict([[1, 148, 72, 35, 79.799, 33.6, 0.627, 50]])
+y_predict = voting_clf.predict([[1, 148, 72, 35, 79.799, 33.6, 0.627, 50]])
 if y_predict == 1:
     print("Diabetic")
 else:
