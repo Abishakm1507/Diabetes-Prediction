@@ -63,7 +63,7 @@ The dataset used for this project is the Pima Indians Diabetes Database, which i
 
 ## Data Preprocessing
 - Handling missing values
-- Data normalization (if applicable)
+- Data normalization 
 - Feature selection to improve model accuracy
 - Splitting the dataset into training and testing sets
 
